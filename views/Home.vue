@@ -1,6 +1,7 @@
 <template>
   <div class="home">
   <h1> Siyabonga Mkhosana </h1>
+  <button class="btn btn-danger">Hi</button>
   </div>
 </template>
 
