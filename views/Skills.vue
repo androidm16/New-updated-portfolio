@@ -56,5 +56,84 @@ export default {
 </script>
 
 <style>
+.Skills{
+    height: 100vh;
+    width: 100%;
+    padding: 60px 0 40px;
+    z-index: 7607603737409743096770347437606;
+}
 
+
+/*Horizontal Timeline*/
+
+body{margin-top:20px;}
+.timeline-steps {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.timeline-steps .timeline-step {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 3rem;
+}
+
+@media all and (max-width:1000px) {
+    .timeline-steps .timeline-step:not(:last-child):after {
+        content: "";
+        display: block;
+        border-top: .25rem dotted #3b82f6;
+        width: 3.46rem;
+        position: absolute;
+        left: 7.5rem;
+        top: .3125rem;
+    }
+    .timeline-steps .timeline-step:not(:first-child):before {
+        content: "";
+        display: block;
+        border-top: .25rem dotted #3b82f6;
+        width: 3.8125rem;
+        position: absolute;
+        right: 7.5rem;
+        top: .3125rem;
+    }
+}
+
+.timeline-steps .timeline-content {
+    width: 10rem;
+    text-align: center;
+}
+
+.timeline-steps .timeline-content .inner-circle {
+    border-radius: 1.5rem;
+    height: 3rem;
+    width: 3rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3b82f6;
+}
+
+.timeline-steps .timeline-content .inner-circle:before {
+    content: "";
+    background-color: #3b82f6;
+    display: inline-block;
+    height: 1rem;
+    width: 1rem;
+    min-width: 1rem;
+    border-radius: 6.25rem;
+    opacity: .5;
+}
+
+ .body{
+    overflow-x: hidden;
+}
+.body{
+    width: 100%;
+    overflow-x: hidden;
+    justify-content: center;
+}
 </style>

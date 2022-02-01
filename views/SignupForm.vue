@@ -1,4 +1,5 @@
 <template>
+<h1 style="box-shadow: inset 0 -6px 0 black; color:white;">CONTACT ME</h1>
 <div class="SignupForm"></div>
 
   <form @submit.prevent="handleSubmit">
@@ -15,13 +16,6 @@
             <option value="recruiter">Recruiter</option>
         </select>
 
-<!-- This is my input of Sills section that has an AddSkill to add a specific skill/s, as well as, with a @click to delete a skill when needed, just by clicking on the skill -->
-        <label>Skills:</label>
-        <input type="text" v-model="tempSkill" @keyup.alt="addSkill">
-        <div v-for="skill in skills" :key="skill" class="pill">
-            <span @click="deleteSkill(skill)">{{ skill }}</span>
-        </div>
-
 <!-- The terms & conditions section with a checkbox -->
         <div class="terms">
             <input type="checkbox" v-model="terms" required>
@@ -30,7 +24,7 @@
 
 <!-- Submission button to create account -->
         <div class="submit">
-            <button>Create an Account</button>
+            <button class="button"><h1>Submit</h1></button>
         </div>
   </form>
 
@@ -46,25 +40,10 @@ export default {
             password: '',
             role: '',
             terms: false,
-            tempSkill: '',
-            skills: [],
             passwordError: ''
         }
     },
     methods: {
-        addSkill(e) {
-            if (e.key === ',' && this.tempSkill) {
-                if (!this.skills.includes(this.tempSkill)) {
-                    this.skills.push(this.tempSkill)
-                }
-                this.tempSkill = ''
-            }
-        },
-        deleteSkill(skill) {
-            this.skills = this.skills.filter((item) => {
-                return skill !== item
-            })
-        },
         handleSubmit() {
             // validate password
             this.passwordError = this.password.length > 5 ? 
@@ -76,6 +55,9 @@ export default {
 
 <style>
 /* This is my styling for the whole Signup Form */
+.SignupForm{
+    background-color: burlywood;
+}
     form {
     max-width: 420px;
     margin: 30px auto;
@@ -121,7 +103,7 @@ export default {
         color: #777;
         cursor: pointer;
     }
-    button {
+    .button {
         background: #0b6dff;
         border: 0;
         padding: 10px 20px;
@@ -132,6 +114,7 @@ export default {
     .submit {
         text-align: center;
     }
+    
     .error {
         color: #ff0062;
         margin-top: 10px;
