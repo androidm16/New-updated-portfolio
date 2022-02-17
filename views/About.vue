@@ -23,8 +23,8 @@
       data-aos-easing="ease-out-cubic"
       data-aos-duration="2000">
 
-      <h1 class="text-uppercase" style="text-align: center; padding-top: 150px; box-shadow: inset 0 -6px 0 #F5A281; color:white;">About Me</h1><br><br>
-      <h5><strong>Hello world, my name is Siyabonga Mkhosana</strong></h5>
+      <h1 class="text-uppercase font-weight-bolder" style="text-align: center; padding-top: 150px; box-shadow: inset 0 -6px 0 #F5A281; color:white;">About Me</h1><br><br>
+      <h5><strong style="font-size: larger; background-color: blue; border-radius: 10px">Hello</strong> <b>world, my name is</b> <strong style="font-size: larger; background-color: blue; border-radius: 10px">Siyabonga Mkhosana</strong></h5>
       <p style="font-size: medium;">A family oriented and committed young man, who is driven to impact the world in a positive way a day at a time. I maintain a desire to learn more and an open personality, meaning I do not shy away from meeting new people or doing presentations. I am inspired by websites and educational games to stimulate mental productivity for young learners with difficulties, and design games to help them with studies. Thanks to the Life Choices Coding Academy I have learned Html, CSS, Bootstrap and Javascript. For this time i've done all types of projects.</p><br>
       <h5><strong>When did my passion for coding start:</strong></h5>
       <p style="font-size: medium;">My passion for the Tech Industry comes from the need to empower young minds with Web Development Technology and create technological convenience for all. If you're interested in working with me, don't hesitate to hire me.</p><br>
@@ -71,9 +71,10 @@ export default {
     padding: 100px 0 40px;
     padding-left: 50px;
 }
-.About{
+#About{
     justify-content: space-evenly;
-    overflow-x: ;
+    overflow-x: auto;
+    height: 100vh;
 }
 .text-black{
     color: white;
@@ -81,7 +82,7 @@ export default {
 }
 .img1 {
     margin: auto;
-    margin-top: 70px;
+    margin-top: 130px;
     padding-bottom: 50px;
     height: 800px;
     position: relative;
